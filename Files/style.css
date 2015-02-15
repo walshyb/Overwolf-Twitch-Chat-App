@@ -2,6 +2,8 @@ html {
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
+    background: rgba(249, 249, 249, 0.8);
+    font-family: 'Helvetica', 'Arial', serif, sans-serif;
 }
 
 .resizeGrip {
@@ -81,4 +83,26 @@ html {
 	bottom: 0;
 	right: 0;
 	cursor: nwse-resize;
+}
+
+#buttonGrid
+{
+    display: inline;
+}
+
+button, #submitButton
+{
+    display: inline;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    background-color: #6441A5;
+    border: 0;
+    float: left;
+    margin-right: 10px;
+}
+
+input[type=text]
+{
+    height: 20px;
+    margin-top: 5px;
 }

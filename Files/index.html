@@ -3,7 +3,6 @@
 	<head> 
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<title>Twitch Chat</title>
-        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" href="style.css">
         <script src="jquery.min.js"></script>
         <script src="jquery.mobile-1.4.5.min.js"></script>
@@ -31,19 +30,7 @@
 					}
 				});
 			};
-			
-			function takeScreenshot(){
-				overwolf.media.takeScreenshot(function(result){
-					if (result.status == "success"){
-						var img = document.getElementById("screenshot");
-						img.src = result.url;
-						img.onload = function() {
-							overwolf.media.shareImage(img, "Screen Shot");
-						};
-					}
-				});
-			}
-            
+
             
 		</script>
 	</head>
@@ -64,18 +51,12 @@
             
             <form id="streamer-name-form" method="post">
                 <label for="streamer-name">Username: </label>
-                <input type="text" id="streamer-name" name="streamer-name" placeholder="Username">
-                <input type="submit" value="Submit">
+                <input type="text" id="streamer-name" name="streamer-name" placeholder="Username"><br>
+                <input type="submit" value="Submit" data-role="none" id="submitButton"/>
             </form>
-            
-            <div id="scriptContainer"></div>
-            
-            <br>
-            
-			<button id="close" onclick="closeWindow();">Close</button>
-			<button onclick="takeScreenshot();">Take Screenshot</button>
-			<button id="open-subwindow" onclick="openSubWindow();">Open Sub-Window</button>
-			<img id="screenshot" width="300px"></img>
+                        
+                <button id="close" onclick="closeWindow();">Close</button>
+
 		</div>
 	</body>
     <script src="functions.js"></script>

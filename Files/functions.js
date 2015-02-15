@@ -13,10 +13,20 @@ function openSubWindow(){
 	return false;
 };
 
+function closeChildWindow(){
+    overwolf.windows.obtainDeclaredWindow("ChatWindow", function(result){
+        if (result.status=="success"){
+            overwolf.windows.close(result.window.id);
+        }
+    });
+};
 
 $("#streamer-name-form").submit(function(){
 	var streamerName = $('#streamer-name').val();
+    window.localStorage.setItem("streamerName", streamerName);
+    
     openSubWindow();
-	window.localStorage.setItem("streamerName", streamerName);
+    window.location.reload();
 	return true;
 });
+
