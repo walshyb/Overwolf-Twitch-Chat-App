@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>Twitch Chat</title>
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery.min.js"></script>
+        <script src="jquery.mobile-1.4.5.min.js"></script>
+		<title>Twitch Chat</title>
+		
+		<script type="text/javascript">
+            $(document).ready(function(){
+                $("#content").load("");
+            });
+        </script>
+	</head>
+	
+	<body>
+		<div id="content"></div>
+		<script>
+		window.addEventListener('streamerName',
+		function(storageEvent)
+		{ 
+			alert("yes");
+			 /* Any change in localStorage call to this funtion */;
+		}, false);
+		</script>
+	</body>
+
+</html>
